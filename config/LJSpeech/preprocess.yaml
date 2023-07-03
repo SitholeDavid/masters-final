@@ -2,7 +2,7 @@ dataset: "LJSpeech"
 
 path:
   # corpus_path: "B:\\LJSpeech"
-  corpus_path: "./../../input/ljspeech-raw"
+  corpus_path: "./../../input/ljspeech-raw/LJSpeech"
   lexicon_path: "lexicon/librispeech-lexicon.txt"
   raw_path: "./raw_data/LJSpeech"
   preprocessed_path: "./preprocessed_data/LJSpeech"
