@@ -82,16 +82,15 @@ class Preprocessor:
                     else:
                         info, pitch, energy, n = ret
                     out.append(info)
+                else:
+                    print('NO EXIST', tg_path)
 
-                try:
-                    if len(pitch) > 0:
-                        pitch_scaler.partial_fit(pitch.reshape((-1, 1)))
-                    if len(energy) > 0:
-                        energy_scaler.partial_fit(energy.reshape((-1, 1)))
+                if len(pitch) > 0:
+                    pitch_scaler.partial_fit(pitch.reshape((-1, 1)))
+                if len(energy) > 0:
+                    energy_scaler.partial_fit(energy.reshape((-1, 1)))
 
-                    n_frames += n
-                except:
-                    print('Failed')
+                n_frames += n
 
         print("Computing statistic quantities ...")
         # Perform normalization if necessary
