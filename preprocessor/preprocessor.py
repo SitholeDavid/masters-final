@@ -12,7 +12,6 @@ from tqdm import tqdm
 
 import audio as Audio
 
-
 class Preprocessor:
     def __init__(self, config):
         self.config = config
