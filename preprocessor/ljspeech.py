@@ -27,6 +27,8 @@ def prepare_align(config):
                 os.makedirs(os.path.join(out_dir, speaker), exist_ok=True)
                 wav, _ = librosa.load(wav_path, sr=sampling_rate)
                 wav = wav / max(abs(wav)) * max_wav_value
+                print('EXISTS MOVING TO', os.path.join(out_dir, speaker, "{}.wav".format(base_name)))
+
                 wavfile.write(
                     os.path.join(out_dir, speaker, "{}.wav".format(base_name)),
                     sampling_rate,
@@ -37,3 +39,5 @@ def prepare_align(config):
                     "w",
                 ) as f1:
                     f1.write(text)
+            else:
+                print('NOT EXIST', wav_path)
