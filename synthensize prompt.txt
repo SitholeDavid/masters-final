@@ -1,0 +1,3 @@
+py -3.8 synthesize.py --text "But are you who you say you are God damnit" --restore_step 900000 --mode single -p config/LJSpeech/preprocess.yaml -m config/LJSpeech/model.yaml -t config/LJSpeech/train.yaml
+
+py -3.8 synthesize.py --text "But who are you god damnit"  --speaker_id 9742 --restore_step 800000 --mode single -p config/LibriTTS/preprocess.yaml -m config/LibriTTS/model.yaml -t config/LibriTTS/train.yaml
