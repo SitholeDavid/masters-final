@@ -75,11 +75,6 @@ class Preprocessor:
                     self.out_dir, "TextGrid", speaker, "{}.TextGrid".format(basename)
                 )
 
-                info = None 
-                pitch = None 
-                energy = None 
-                n = None
-
                 if os.path.exists(tg_path):
                     ret = self.process_utterance(speaker, basename)
                     if ret is None:
@@ -88,12 +83,15 @@ class Preprocessor:
                         info, pitch, energy, n = ret
                     out.append(info)
 
-                if len(pitch) > 0:
-                    pitch_scaler.partial_fit(pitch.reshape((-1, 1)))
-                if len(energy) > 0:
-                    energy_scaler.partial_fit(energy.reshape((-1, 1)))
+                try:
+                    if len(pitch) > 0:
+                        pitch_scaler.partial_fit(pitch.reshape((-1, 1)))
+                    if len(energy) > 0:
+                        energy_scaler.partial_fit(energy.reshape((-1, 1)))
 
-                n_frames += n
+                    n_frames += n
+                except:
+                    print('Failed')
 
         print("Computing statistic quantities ...")
         # Perform normalization if necessary
