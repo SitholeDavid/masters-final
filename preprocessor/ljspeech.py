@@ -7,7 +7,6 @@ from tqdm import tqdm
 
 from text import _clean_text
 
-
 def prepare_align(config):
     in_dir = config["path"]["corpus_path"]
     out_dir = config["path"]["raw_path"]
