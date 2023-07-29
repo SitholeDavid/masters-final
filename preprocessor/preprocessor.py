@@ -67,9 +67,6 @@ class Preprocessor:
         for i, speaker in enumerate(tqdm(os.listdir(self.in_dir))):
             speakers[speaker] = i
 
-            if speaker == 'spanish-single-speaker':
-                speaker = 'SpanishSingleSpeaker'
-
             for wav_name in os.listdir(os.path.join(self.in_dir, speaker)):
                 if ".wav" not in wav_name:
                     continue
