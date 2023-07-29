@@ -1,7 +1,7 @@
 dataset: "SpanishSingleSpeaker"
 
 path:
-  corpus_path: "./input/spanish-single-speaker/lj-spanish-raw-data"
+  corpus_path: "./../../input/spanish-single-speaker/lj-spanish-raw-data"
   lexicon_path: "lexicon/spanish-lexicon.txt"
   raw_path: "./raw_data/SpanishSingleSpeaker"
   preprocessed_path: "./preprocessed_data/SpanishSingleSpeaker"
