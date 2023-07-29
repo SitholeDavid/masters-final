@@ -11,7 +11,7 @@ def prepare_align(config):
     out_dir = config["path"]["raw_path"]
     sampling_rate = config["preprocessing"]["audio"]["sampling_rate"]
     max_wav_value = config["preprocessing"]["audio"]["max_wav_value"]
-    speaker = "spanish-single-speaker"
+    speaker = "SpanishSingleSpeaker"
     transcripts =  pd.read_csv( os.path.join(in_dir, 'transcript.txt'), sep='|', header=None)
     transcripts.columns = ['file', 'original script', 'normalized script', 'duration']
 

@@ -75,7 +75,7 @@ class Preprocessor:
                     self.out_dir, "TextGrid", speaker, "{}.TextGrid".format(basename)
                 )
 
-                print('TARGET: ', tg_path)
+                # print('TARGET: ', tg_path)
 
                 if os.path.exists(tg_path):
                     ret = self.process_utterance(speaker, basename)
